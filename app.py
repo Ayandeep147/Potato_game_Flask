@@ -126,4 +126,4 @@ def about():
     return render_template('about.template')
 
 if __name__ == "__main__":
-    app.run(debug=True, port=8000)
+    app.run()
