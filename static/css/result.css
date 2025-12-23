@@ -1,0 +1,162 @@
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ================= PAGE ================= */
+body {
+    min-height: 100vh;
+    background: #FFF1CF;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+/* ================= WRAPPER ================= */
+.result-wrapper {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 30px;
+}
+
+/* ================= ABOUT BUTTON ================= */
+.about-btn {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    text-decoration: none;
+    border: 2px solid #E67E00;
+    color: #7A3A00;
+    padding: 10px 18px;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    background: transparent;
+}
+
+.about-btn:hover {
+    background: #FFF6DB;
+}
+
+/* ================= CARD ================= */
+.result-card {
+    background: #FFFDF8;
+    width: 100%;
+    max-width: 650px;
+    padding: 45px;
+    border-radius: 22px;
+    text-align: center;
+    box-shadow: 0 22px 45px rgba(0, 0, 0, 0.1);
+}
+
+/* ================= POTATO ================= */
+.result-potato {
+    width: 120px;
+    margin-bottom: 25px;
+    animation: potatoBounce 0.9s infinite;
+    transform-origin: bottom center;
+}
+
+/* ================= TITLE ================= */
+.result-title {
+    font-size: 36px;
+    font-weight: 800;
+    color: #7A3A00;
+    margin-bottom: 12px;
+}
+
+/* ================= SCORE TEXT ================= */
+.result-score {
+    font-size: 18px;
+    color: #E67E00;
+    margin-bottom: 12px;
+}
+
+/* ================= PERCENT ================= */
+.result-percent {
+    font-size: 64px;
+    font-weight: 900;
+    color: #E67E00;
+    margin-bottom: 25px;
+}
+
+/* ================= MESSAGE BOX ================= */
+.result-message-box {
+    border: 2px solid #F4C46E;
+    border-radius: 16px;
+    padding: 22px;
+    font-size: 18px;
+    color: #7A3A00;
+    margin-bottom: 35px;
+    background: #FFF6DB;
+    line-height: 1.5;
+}
+
+/* ================= PLAY AGAIN ================= */
+.play-btn {
+    display: inline-block;
+    background: #E67E00;
+    color: white;
+    text-decoration: none;
+    padding: 14px 38px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 14px;
+    transition: all 0.3s ease;
+}
+
+.play-btn:hover {
+    background: #CF6D00;
+    transform: translateY(-3px);
+}
+
+/* ================= POTATO PHYSICS BOUNCE ================= */
+@keyframes potatoBounce {
+    0% {
+        transform: translateY(0) scaleY(1);
+    }
+
+    30% {
+        transform: translateY(-55px) scaleY(1.05);
+    }
+
+    /* IMPACT */
+    50% {
+        transform: translateY(0) scaleY(0.88);
+    }
+
+    /* REBOUND */
+    65% {
+        transform: translateY(-28px) scaleY(1.02);
+    }
+
+    80% {
+        transform: translateY(0) scaleY(0.96);
+    }
+
+    100% {
+        transform: translateY(0) scaleY(1);
+    }
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 600px) {
+    .result-card {
+        padding: 30px 22px;
+    }
+
+    .result-title {
+        font-size: 28px;
+    }
+
+    .result-percent {
+        font-size: 48px;
+    }
+
+    .result-potato {
+        width: 90px;
+    }
+}

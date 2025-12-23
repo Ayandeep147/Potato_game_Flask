@@ -1,0 +1,103 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* PAGE BACKGROUND */
+body {
+    height: 100vh;
+    background-color: #FFF1CF;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* HEADER STYLING */
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+/* MAIN TITLE */
+header h1 {
+    font-size: 48px;
+    font-weight: 800;
+    color: #7A3A00;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+/* SUBTITLE */
+header p {
+    font-size: 18px;
+    color: #D35400;
+}
+
+/* MAIN BODY */
+.main_body {
+    text-align: center;
+}
+
+/* START BUTTON */
+button {
+    background-color: #E67E00;
+    color: white;
+    border: none;
+    padding: 14px 36px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* BUTTON HOVER */
+button:hover {
+    background-color: #CF6D00;
+    transform: scale(1.05);
+}
+
+/* POTATO IMAGE */
+.potato {
+    width: 120px;
+    margin-bottom: 25px;
+    animation: potatoBounce 1s infinite;
+    transform-origin: bottom center;
+    margin-bottom: 10px;
+}
+
+
+/* BOUNCE ANIMATION */
+@keyframes potatoBounce {
+    0% {
+        transform: translateY(0) scaleY(1);
+    }
+
+    30% {
+        transform: translateY(-55px) scaleY(1.05);
+    }
+
+    /* IMPACT */
+    50% {
+        transform: translateY(0) scaleY(0.9);
+    }
+
+    /* SMALL REBOUND */
+    65% {
+        transform: translateY(-25px) scaleY(1.02);
+    }
+
+    80% {
+        transform: translateY(0) scaleY(0.97);
+    }
+
+    100% {
+        transform: translateY(0) scaleY(1);
+    }
+}
+

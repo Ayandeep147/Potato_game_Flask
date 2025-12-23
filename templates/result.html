@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Potato Result</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/result.css') }}">
+</head>
+<body>
+
+<div class="result-wrapper">
+
+
+    <div class="result-card">
+
+        <!-- BOUNCING POTATO -->
+        <img src="{{ url_for('static', filename='images/potato.png') }}"
+             class="result-potato"
+             alt="potato">
+
+        <!-- TITLE -->
+        <h1 class="result-title">
+            {{ title_message }}
+        </h1>
+
+        <!-- SCORE TEXT -->
+        <p class="result-score">
+            You scored {{ total_score }} out of {{ total }}
+        </p>
+
+        <!-- PERCENT -->
+        <div class="result-percent">
+            {{ (total_score * 100) // total }}%
+        </div>
+
+        <!-- MESSAGE BOX -->
+        <div class="result-message-box">
+            {{ message }}
+        </div>
+
+        <!-- PLAY AGAIN -->
+        <a href="/start" class="play-btn">Play Again</a>
+
+    </div>
+
+</div>
+
+</body>
+</html>

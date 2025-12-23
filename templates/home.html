@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Potato Game</title>
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <!-- HEADER OF THE WEB PAGE -->
+     <header>
+         <img src="{{ url_for('static', filename='images/potato.png') }}" class="potato">
+         <h1><strong>ARE YOU SMARTER THAN A POTATO?</strong></h1>
+         <p>Take the quiz and find out!</p>
+     </header>
+
+     <!-- MAIN CONTENT AREA OF THE WEB PAGE -->
+     <section>
+         <div class="main_body">
+            <form action="/start" method="get">
+                  <button type="submit">Start the game</button>
+            </form>
+         </div>
+     </section>
+    
+</body>
+</html>

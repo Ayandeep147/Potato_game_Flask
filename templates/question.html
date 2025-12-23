@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Potato Game</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/question.css') }}">
+</head>
+<body>
+
+<div class="quiz-wrapper">
+
+    <div class="quiz-card">
+
+        <!-- TOP BAR -->
+        <div class="quiz-top">
+            <span class="quiz-progress-text">
+                Question {{ current_question }} of {{ total }}
+            </span>
+
+            <img src="{{ url_for('static', filename='images/potato.png') }}"
+                 class="quiz-potato" alt="potato">
+        </div>
+
+        <!-- QUESTION TEXT -->
+        <h2 class="quiz-question">
+            {{ question_text }}
+        </h2>
+
+        <!-- OPTIONS -->
+        <form action="/answer" method="post" class="quiz-form">
+
+            {% for option in options %}
+            <label class="option-card">
+                <input type="radio" name="answer" value="{{ option }}" required>
+                <span>{{ option }}</span>
+            </label>
+            {% endfor %}
+
+            <!-- FOOTER -->
+            <div class="quiz-footer">
+                <button type="submit" class="next-btn">
+                    Next Question
+                </button>
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+</body>
+</html>
